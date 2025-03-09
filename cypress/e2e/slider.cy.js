@@ -23,8 +23,8 @@ describe('Swiper Gallery Test', function () {
     cy.get('.swiper-button-next').click();
     cy.wait(2000);
     cy.get('.swiper-slide-active').should('contain', 'United Kingdom');
-    cy.get('.swiper-button-next').click({ force: true });
+    cy.get('.swiper-button-prev').click({ force: true });
     cy.wait(2000);
-    cy.get('.swiper-slide-active').should('contain', 'Paris');
+    cy.get('.swiper-slide-active').should('contain', 'Rome');
   });
 });
